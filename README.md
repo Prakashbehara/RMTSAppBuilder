@@ -9,5 +9,7 @@ Mysql script:
 CREATE SCHEMA `rmts_app` ;
 
 npm install mysql
+npm install --save @types/mysql
+
 
 
