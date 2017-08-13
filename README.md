@@ -11,5 +11,11 @@ CREATE SCHEMA `rmts_app` ;
 npm install mysql
 npm install --save @types/mysql
 
+Publishing restful web services:
+
+npm initi
+npm install --save-dev nodemon
+npm install express --save
+
 
 
