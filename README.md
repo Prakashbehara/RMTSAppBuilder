@@ -18,4 +18,6 @@ npm install --save-dev nodemon
 npm install express --save
 npm install body-parser
 
+postman chrome plugin for testing REST services
+
 
