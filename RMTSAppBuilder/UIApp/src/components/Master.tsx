@@ -1,7 +1,4 @@
 import * as React from 'react';
-
-
-
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
@@ -11,10 +8,9 @@ import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import IconButton from 'material-ui/IconButton';
 import DataTableFilter from './DataTableFilter';
 import Paper from 'material-ui/Paper';
+import '../App.css';
 
 const SelectableList = makeSelectable(List);
-
-import '../App.css';
 
 export interface IMasterProp{
 
@@ -25,8 +21,7 @@ export interface IMasterState{
 }
 
 const Logged = (
-  <IconMenu
-   
+  <IconMenu   
     iconButtonElement={
       <IconButton><MoreVertIcon /></IconButton>
     }
@@ -49,11 +44,11 @@ class Master extends React.Component<IMasterProp, IMasterState> {
   }
 
   componentDidMount() {
-      alert('componentDidMount' );      
+           
   }
 
   componentWillUnmount() {
-    alert('componentWillUnmount ');
+    
   }
 
 handleTouchTap() {
@@ -62,54 +57,13 @@ handleTouchTap() {
 
   render() { 
 
-const tableData = [
-  {
-    name: 'John Smith',
-    status: 'Employed',
-    selected : false,
-  },
-  {
-    name: 'Randal White',
-    status: 'Unemployed',
-    selected : false,
-  },
-  {
-    name: 'Stephanie Sanders',
-    status: 'Employed',
-    selected : false,
-  },
-  {
-    name: 'Steve Brown',
-    status: 'Employed',
-    selected : false,
-  },
-  {
-    name: 'Joyce Whitten',
-    status: 'Employed',
-    selected : false,
-  },
-  {
-    name: 'Samuel Roberts',
-    status: 'Employed',
-    selected : false,
-  },
-  {
-      name: 'Adam Moore',
-      status: 'Employed',
-      selected : false,
-    },
-  ];
-
+const tableData = [{ }];
     var bodyStyle = {
-             "margin-left" : "0%" 
-            
+             "margin-left" : "0%"
     };
 
     return (
-
-
      <Paper>
-
            <AppBar  title="My App" onLeftIconButtonTouchTap={this.handleTouchTap}  
                         onTitleTouchTap={this.handleTouchTap} 
                         iconElementRight={ Logged }  
@@ -133,17 +87,12 @@ const tableData = [
                     ]}
                   />
               </SelectableList>
-
              </Drawer>
-
              <Paper id="pandu"  style={bodyStyle}>
                     <DataTableFilter inputTableData={tableData}  />
-
-             </Paper>
-           
+             </Paper>           
      </Paper>
     );
   }
 }
-
 export default Master;
