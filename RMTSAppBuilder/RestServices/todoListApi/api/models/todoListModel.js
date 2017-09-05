@@ -6,14 +6,14 @@ getAllTasks:function(callback){
   var connection = mysql.createConnection({
       host     : 'localhost',
       user     : 'root',
-      password : '',
+      password : 'admin',
       database : 'rmts_app',
       debug   : false
     });
  
     connection.connect();
     console.log('about to invoke data from DB');
- var response = connection.query("select * from rmts_app.employee",callback);
+ var response = connection.query("select false selected,e.id,e.Name,e.City,e.State,e.Age,e.Mobile_No,e.dob,e.doj,e.Department from rmts_app.employee e",callback);
 console.log('Completed data from DB');
 
  connection.end();
