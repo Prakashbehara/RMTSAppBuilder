@@ -7,8 +7,11 @@ var Task = require('../models/todoListModel');
 exports.list_all_tasks = function(req, res) {
   Task.getAllTasks(function(err, task) {
     console.log('getAllTasks method completed in the model');
-    if (err)
+    
+    res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+    if (err){
       res.send(err);
+    }
     res.json(task);
   });
 };
